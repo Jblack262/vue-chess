@@ -1,6 +1,6 @@
 <template>
   <div class="board">
-    <div class="row">
+    <div class="row" @click="selectTile(0)">
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
@@ -14,7 +14,7 @@
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
     </div>
-    <div class="row e">
+    <div class="row e" @click="selectTile(1)">
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
@@ -28,7 +28,7 @@
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
     </div>
-    <div class="row">
+    <div class="row" @click="selectTile(2)">
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
@@ -42,7 +42,7 @@
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
     </div>
-    <div class="row e">
+    <div class="row e" @click="selectTile(3)">
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
@@ -56,7 +56,7 @@
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
     </div>
-    <div class="row">
+    <div class="row" @click="selectTile(4)">
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
@@ -70,7 +70,7 @@
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
     </div>
-    <div class="row e">
+    <div class="row e" @click="selectTile(5)">
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
@@ -84,7 +84,7 @@
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
     </div>
-    <div class="row">
+    <div class="row" @click="selectTile(6)">
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
@@ -98,7 +98,7 @@
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
     </div>
-    <div class="row e">
+    <div class="row e" @click="selectTile(7)">
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
@@ -112,7 +112,7 @@
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
     </div>
-    <div class="row">
+    <div class="row" @click="selectTile(8)">
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
@@ -126,7 +126,7 @@
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
     </div>
-    <div class="row e">
+    <div class="row e" @click="selectTile(9)">
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
@@ -140,7 +140,7 @@
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
     </div>
-    <div class="row">
+    <div class="row" @click="selectTile(10)">
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
@@ -154,7 +154,7 @@
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
     </div>
-    <div class="row e">
+    <div class="row e" @click="selectTile(11)">
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
       <div class="square" :style="{width: `${tileWidth}px`, height: `${tileWidth}px`}"></div>
@@ -176,6 +176,13 @@ export default {
   name: 'board',
   props: {
     tileWidth: Number,
+  },
+  methods: {
+    selectTile(y) {
+      let mouseX = event.clientX;
+      let x = Math.floor(mouseX / 50)
+      console.log([x,y])
+    },
   }
 }
 </script>
