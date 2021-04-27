@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div class="chess">
-      <Board :tileWidth="50"/>
-      <Pawn v-for="pawn in pawns" :key="pawns[pawn]" :id="pawns[pawn]" :selected="selected" @pawnClick="selectPawn" :tileWidth="50" :posX="pawnPos[pawn][0]" :posY="pawnPos[pawn][1]"/>
+      <Board :tileWidth="tileWidth" @tileSelect="movepiece"/>
+      <Pawn v-for="pawn in pawns" :key="pawns[pawn]" :id="pawns[pawn]" :selected="selected" @pawnClick="selectPawn" :tileWidth="tileWidth" :posX="pawnPos[pawn][0]" :posY="pawnPos[pawn][1]"/>
     </div>
 
   </div>
@@ -16,6 +16,7 @@ export default {
   name: 'App',
   data() {
     return {
+      tileWidth: 50,
       pawns: [0,1,2,3,4,5,6,7,8,9,10,11],
       pawnPos: [[0,1],[1,1],[2,1],[3,1],[4,1],[5,1],[6,1],[7,1],[8,1],[9,1],[10,1],[11,1]],
       selected: undefined,
@@ -29,6 +30,17 @@ export default {
     selectPawn(id) {
       this.selected= id;
       console.log(this.selected)
+    },
+    movepiece(x,y) {
+      console.log('move piece')
+      console.log(x,y);
+      if (this.selected != undefined) {
+        this.pawnPos[this.selected][0] = x;
+        this.pawnPos[this.selected][1] = y;
+        console.log(this.pawnPos[this.selected][0] = x);
+        console.log(this.pawnPos[this.selected][1] = y);
+      }
+      this.selected = undefined;
     }
   }
 }

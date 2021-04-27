@@ -180,8 +180,9 @@ export default {
   methods: {
     selectTile(y) {
       let mouseX = event.clientX;
-      let x = Math.floor(mouseX / 50)
-      console.log([x,y])
+      let x = Math.floor(mouseX / this.tileWidth)
+      console.log(x)
+      this.$emit('tileSelect',x,y)
     },
   }
 }
